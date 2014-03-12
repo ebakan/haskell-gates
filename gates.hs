@@ -23,10 +23,6 @@ xnor2 = (fmap.fmap) not xor2
 
 numToArr len num = [testBit (num :: Int) x | x <- [0..(len-1)]]
 
-arrLift2 fn (x1:x2:xs) = fn x1 x2
-arrLift3 fn (x1:x2:x3:xs) = fn x1 x2 x3
-arrLift4 fn (x1:x2:x3:x4:xs) = fn x1 x2 x3 x4
-
 apply2 fn [] = []
 apply2 fn (x1:x2:xs) = fn x1 x2 : apply2 fn xs
 
